@@ -2,14 +2,15 @@
 int main()
 {
 
-float kilo, boy;
-float BKI;
+float kilo, boy, BKI; //değişkenlerin atanması
+
 printf("Ilk kilonuzu (kg cinsinden), sonra boyunuzu (metre cinsinden) giriniz.\n");
-scanf("%f %f", &kilo,&boy);
+scanf("%f %f", &kilo,&boy); //kilo ve boyu klavyeden alırız (formül gereği kilogram ve metre olarak alınmalı)
 
-BKI=kilo/(boy*boy);
-printf("BKI=%0.3f\n", BKI);
+BKI=kilo/(boy*boy); //BKI hesabı yapma 
+printf("BKI=%0.3f\n", BKI); //BKI yazdırma
 
+//BKI ya göre uygun sonucu yazdırma
 if (BKI < 18.5) printf("Zayif\n");
 else if (BKI < 25) printf("Normal\n");
 else if (BKI < 30) printf("Fazla kilolu\n");
