@@ -8,7 +8,7 @@ srand(time(NULL));
 int tahmin=0;
 int gizli = 1 + rand() % 101;
 
-printf("Gizli: %d\n", gizli);
+// printf("Gizli: %d\n", gizli);
 
 for (int i = 1; i <= 5; i++) {
 

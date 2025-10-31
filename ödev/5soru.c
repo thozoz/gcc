@@ -1,50 +1,36 @@
 #include <stdio.h>
+#include <wchar.h>
+#include <io.h>
+#include <fcntl.h>
 
 int main() {
 
-char harf;
-scanf("%c", &harf);
+    _setmode(_fileno(stdout), _O_U16TEXT);
+    _setmode(_fileno(stdin), _O_U16TEXT);
+    
+    wchar_t harf; 
+    
+    wprintf(L"Bir harf girin: "); 
+    wscanf(L" %lc", &harf); 
 
-switch (harf)
-{
+    switch (harf)
+    {
+        
+        case L'a':
+        case L'e':
+        case L'i':
+        case L'ı': 
+        case L'o':
+        case L'ö': 
+        case L'u':
+        case L'ü': 
+            wprintf(L"Sesli harf!");
+            break; 
 
-case 'a':
-    printf("Sesli harf!");
-break;
+        default:
+            wprintf(L"Sessiz harf!");
+            break;
+    }
 
-case 'e':
-    printf("Sesli harf!");
-break;
-
-case 'u':
-    printf("Sesli harf!");
-break;
-
-case 'ü':
-    printf("Sesli harf!");
-break;
-
-case 'o':
-    printf("Sesli harf!");
-break;
-
-case 'ö':
-    printf("Sesli harf!");
-break;
-
-case 'i':
-    printf("Sesli harf!");
-break;
-
-case 'ı':
-    printf("Sesli harf!");
-break;
-
-default:
-    printf("Sessiz harf!");
-break;
-}
-
-return 0;
-
+    return 0;
 }

@@ -6,7 +6,7 @@ int sayi, buyuk, buyuk2, kucuk;
 printf("1. sayiyi giriniz: ");
 scanf("%d", &sayi);
 buyuk = sayi;
-buyuk2 = sayi; // Negatif sayılar girilme ihtimaline karşı bunu da ilk sayı yap
+buyuk2 = sayi;
 kucuk = sayi;
 
 for (int i = 2; i <= 10; i++) {
